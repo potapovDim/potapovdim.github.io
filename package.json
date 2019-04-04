@@ -3,26 +3,45 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server"
+  },
+  "devDependencies": {
     "babel": "^6.23.0",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.5",
-    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "babel-register": "^6.26.0",
-    "copy-webpack-plugin": "^5.0.2",
-    "react": "^16.8.6",
-    "react-redux": "^6.0.1",
-    "redux": "^4.0.1",
-    "webpack": "^4.29.6"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "chai": "^4.2.0",
+    "css-loader": "^0.28.11",
+    "css-modules-require-hook": "^4.0.6",
+    "cssnano": "^3.10.0",
+    "enzyme": "^3.8.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "fontgen-loader": "^0.2.1",
+    "ignore-styles": "^5.0.1",
+    "jsdom": "^11.12.0",
+    "mocha": "^3.4.2",
+    "node-sass": "^4.9.3",
+    "normalize.css": "^7.0.0",
+    "postcss-cssnext": "^2.11.0",
+    "postcss-loader": "^2.1.6",
+    "react-addons-test-utils": "^15.6.2",
+    "react-inlinesvg": "^0.6.0",
+    "sass-loader": "^6.0.7",
+    "sass-resources-loader": "^1.3.3",
+    "style-loader": "^0.18.1",
+    "svg-inline-loader": "^0.7.1",
+    "svg-inline-react": "^2.1.0",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.11.3",
+    "webpack-svgstore-plugin": "^4.0.0"
   },
   "repository": {
     "type": "git",
@@ -33,5 +52,14 @@
   "bugs": {
     "url": "https://github.com/potapovDim/potapovdim.github.io/issues"
   },
-  "homepage": "https://github.com/potapovDim/potapovdim.github.io#readme"
+  "homepage": "https://github.com/potapovDim/potapovdim.github.io#readme",
+  "dependencies": {
+    "has-flag": "^3.0.0",
+    "lodash": "^4.17.11",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^6.0.1",
+    "react-router": "^5.0.0",
+    "redux": "^4.0.1"
+  }
 }
