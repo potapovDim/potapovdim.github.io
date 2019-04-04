@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha $(find ./test/ -path '*.test.*') --compilers js:babel-core/register --require ignore-styles --require ./test/setup.js",
     "dev": "webpack-dev-server"
   },
   "devDependencies": {
