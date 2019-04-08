@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha $(find ./test/ -path '*.test.*') --compilers js:babel-core/register --require ignore-styles --require ./test/setup.js",
+    "test": "mocha $(find ./tests/ -path '*.test.*') --compilers js:babel-core/register --require ignore-styles --require ./tests/setup.js",
     "dev": "webpack-dev-server"
   },
   "devDependencies": {
@@ -60,6 +60,7 @@
     "react-dom": "^16.8.6",
     "react-redux": "^6.0.1",
     "react-router": "^5.0.0",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "whatwg-fetch": "^3.0.0"
   }
 }

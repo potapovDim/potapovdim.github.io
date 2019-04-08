@@ -34,9 +34,9 @@ global.React = require('react')
 global.navigator = win.navigator
 
 
-Object.keys(window).forEach((key) => {
-  global[key] = window[key]
-  // if ((key in global)) {
-  //   window[key] = window[key]
-  // }
-})
+// Object.keys(window).forEach((key) => {
+//   if((key in global)) {
+//     global[key] = window[key]
+//     window[key] = window[key]
+//   }
+// })
