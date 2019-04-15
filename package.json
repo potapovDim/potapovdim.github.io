@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha $(find ./tests/ -path '*.test.*') --compilers js:babel-core/register --require ignore-styles --require ./tests/setup.js",
+    "test": "mocha $(find ./tests/ -path '*.spec.*') --compilers js:babel-core/register --require ignore-styles --require ./tests/setup.js",
     "dev": "webpack-dev-server"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.0.0",
     "babel": "^6.23.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",

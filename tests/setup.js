@@ -1,42 +1,24 @@
-import {JSDOM} from 'jsdom'
-import hook from 'css-modules-require-hook'
-import _ from 'lodash'
-import 'babel-polyfill'
 
-hook({
-  generateScopedName: '[name]__[local]___[hash:base64:5]'
-})
+const {JSDOM} = require('jsdom')
 
-const dom = new JSDOM('<!doctype html><html>' +
-  '<body>' +
-  '<div id="top-nav"></div>' +
-  '<div id="hook-target"></div>' +
-  '<script ></script>' +
-  '<script ></script>' +
-  '<div name="main"></div>' +
-  '<div class="aside__control"></div>' +
-  '<div id="editor_page" class="main__page"></div>' +
-  '<div id="app">' +
-  '</div>' +
-  '</body>' +
-  '</html>', {
-    url: 'http://localhost'
-  })
+const jsdom = new JSDOM('<!doctype html><html><body></body></html>')
+const {window} = jsdom
 
-const win = dom.window
-const doc = win.document
+function copyProps(src, target) {
+  const srcDescriptor = Object.getOwnPropertyDescriptors(src)
+  const targetDescriptor = Object.getOwnPropertyDescriptors(target)
+  Object.defineProperties(target, Object.assign(srcDescriptor, targetDescriptor))
+}
 
-
-global.Reflect = global.Reflect || reflect
-global.document = doc
-global.window = win
-global.React = require('react')
-global.navigator = win.navigator
-
-
-// Object.keys(window).forEach((key) => {
-//   if((key in global)) {
-//     global[key] = window[key]
-//     window[key] = window[key]
-//   }
-// })
+global.window = window
+global.document = window.document
+global.navigator = {
+  userAgent: 'node.js'
+}
+global.requestAnimationFrame = function(callback) {
+  return setTimeout(callback, 0)
+}
+global.cancelAnimationFrame = function(id) {
+  clearTimeout(id);
+}
+copyProps(window, global)
