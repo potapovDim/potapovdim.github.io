@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
+import {Link} from '../commons'
 
 class Footer extends Component {
   render() {
     const {projects} = this.props
-    const links = projects.map(({name, url}, index) => <span key={index}>{name} &nbsp {url}</span>)
     return (
-      <div>{links}</div>
+      <div>{projects.map((project, index) => <Link key={index} {...project} />)}</div>
     )
   }
 }
