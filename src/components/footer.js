@@ -3,9 +3,12 @@ import {Link} from '../commons'
 
 class Footer extends Component {
   render() {
-    const {projects} = this.props
+    const {projects = [], socialNetworks = []} = this.props
     return (
-      <div>{projects.map((project, index) => <Link key={index} {...project} />)}</div>
+      <div>
+        <div>{projects.map((project, index) => <Link key={index} {...project} />)}</div>
+        <div>{socialNetworks.map((project, index) => <Link key={index} {...project} />)}</div>
+      </div>
     )
   }
 }

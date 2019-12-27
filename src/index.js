@@ -11,10 +11,19 @@ const projects = [
     name: 'React eyedropper', url: 'https://github.com/potapovDim/react-eyedropper'
   },
   {
-    name: 'React eyedropper', url: 'https://github.com/potapovDim/react-eyedropper'
+    name: 'Selenium webdriver binding', url: 'https://github.com/potapovDim/awb'
+  }
+]
+
+const socialNetworks = [
+  {
+    name: 'Facebook', url: 'https://www.facebook.com/dima.potapov.33',
   },
   {
-    name: 'Selenium webdriver binding', url: 'https://github.com/potapovDim/awb'
+    name: 'Youtube', url: 'https://www.youtube.com/channel/UC4ZVfrsYNgi3WNSQl5IrICQ'
+  },
+  {
+    name: 'LinkedIn', url: 'https://www.linkedin.com/in/dmytro-potapov-b15183101/'
   }
 ]
 
@@ -25,7 +34,7 @@ class Main extends Component {
       <div>
         <Header />
         Hello from main component
-        <Footer projects={projects} />
+        <Footer projects={projects} socialNetworks={socialNetworks} />
       </div>
     )
   }
